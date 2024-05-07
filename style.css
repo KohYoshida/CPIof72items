@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  /* ビューポートの高さに合わせています */
+    margin: 0;      /* ブラウザのデフォルトマージンを解除 */
+}
+
+.tick line {
+    stroke: rgb(128, 118, 118);
+}
+
+#selectItem {
+    margin-bottom: 20px; /* SVGとの間に少しスペースを作ります */
+    appearance: none; /* デフォルトのドロップダウン矢印を削除 */
+    background-color: #f7f7f7; /* 背景色を設定 */
+    border: 1px solid #ccc; /* 枠の色と太さを設定 */
+    border-radius: 5px; /* 枠の角を丸くする */
+    padding: 10px 15px; /* テキストと枠の間に余白を設定 */
+    font-size: 16px; /* フォントサイズを設定 */
+    color: #333; /* フォントカラーを設定 */
+    cursor: pointer; /* ホバー時のカーソルをポインターに設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を付けて立体感を出す */
+    transition: border-color 0.2s, box-shadow 0.2s; /* 遷移効果を設定 */
+}
+
+#selectItem:hover {
+    border-color: #888; /* ホバー時に枠の色を変更 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* ホバー時に影を強調 */
+}
+
+#selectItem:focus {
+    outline: none; /* フォーカス時のアウトラインを削除 */
+    border-color: #0056b3; /* フォーカス時の枠の色を変更 */
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.25); /* フォーカス時の影を設定 */
+}
+
+
+.line {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+.highlight {
+    fill: none;
+    stroke: rgb(25, 66, 212);
+    stroke-width: 3.5px;
+}
+
+.marker {
+    fill: rgb(25, 66, 212);
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    font: 14px sans-serif;
+    font-weight: bold;
+    background: none;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.temporary-highlight {
+    stroke: rgb(91, 184, 231); 
+    stroke-width: 3.5px;
+}
+
+#toggleButton {
+    margin-bottom: 20px; /* SVGとの間に少しスペースを作ります */
+    appearance: none; /* デフォルトのドロップダウン矢印を削除 */
+    background-color: #f7f7f7; /* 背景色を設定 */
+    border: 1px solid #ccc; /* 枠の色と太さを設定 */
+    border-radius: 5px; /* 枠の角を丸くする */
+    padding: 5px 10px; /* テキストと枠の間に余白を設定 */
+    font-size: 16px; /* フォントサイズを設定 */
+    color: #333; /* フォントカラーを設定 */
+    cursor: pointer; /* ホバー時のカーソルをポインターに設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を付けて立体感を出す */
+    transition: border-color 0.2s, box-shadow 0.2s; /* 遷移効果を設定 */
+}
+
+#toggleButton:hover {
+    border-color: #888; /* ホバー時に枠の色を変更 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* ホバー時に影を強調 */
+}
